@@ -29,68 +29,68 @@ The script accepts user input, creates a directory and file, collects system inf
 
 Creates a directory based on the user's input.
 
-\```bash
+```bash
 mkdir -p "$DIR_NAME"
-\```
+```
 
 ### 2. touch
 
 Creates the `processes.txt` file inside the directory.
 
-\```bash
+```bash
 touch "$DIR_NAME/processes.txt"
-\```
+```
 
 ### 3. echo
 
 Displays information on the terminal.
 
-\```bash
+```bash
 echo "Current Date: $CURRENT_DATE"
-\```
+```
 
 ### 4. df
 
 Displays disk usage.
 
-\```bash
+```bash
 df -h
-\```
+```
 
 ### 5. ps
 
 Displays the currently running processes.
 
-\```bash
+```bash
 ps
-\```
+```
 
 ### 6. read -p
 
 Takes input from the user.
 
-\```bash
+```bash
 read -p "Enter the directory name you want to create: " DIR_NAME
-\```
+```
 
 ### 7. Variables
 
 Variables are used to store system information.
 
-\```bash
+```bash
 CURRENT_DATE=$(date)
 HOST_NAME=$(hostname)
 USERNAME=$(whoami)
 DISK_USAGE=$(df -h)
-\```
+```
 
 ### 8. Output Redirection
 
 The running process information is stored in a file using `>`.
 
-\```bash
+```bash
 ps > "$DIR_NAME/processes.txt"
-\```
+```
 
 ---
 
@@ -98,19 +98,19 @@ ps > "$DIR_NAME/processes.txt"
 
 ### Command
 
-\```bash
+```bash
 ./system_info.sh
-\```
+```
 
 ### User Input
 
-\```
+```
 Enter the directory name you want to create: system_data
-\```
+```
 
 ### Output
 
-\```
+```
 =================================
        SYSTEM INFORMATION
 =================================
@@ -144,7 +144,7 @@ Running Processes:
 Process information has been saved to:
 
 system_data/processes.txt
-\```
+```
 
 ---
 
@@ -156,16 +156,16 @@ The script creates the `system_data` directory using `mkdir` and creates the `pr
 
 **Command**
 
-\```bash
+```bash
 ls -l system_data
-\```
+```
 
 **Output**
 
-\```
+```
 total 8
 -rw-r--r--  1 amishismacbook  staff  111  3 Sep 18:28 processes.txt
-\```
+```
 
 ### 2. Verify Process Information
 
@@ -173,29 +173,29 @@ The running process information is stored in `processes.txt` using output redire
 
 **Command**
 
-\```bash
+```bash
 cat system_data/processes.txt
-\```
+```
 
 **Output**
 
-\```
+```
   PID TTY           TIME CMD
  2806 ttys000     0:00.11 -zsh
  3085 ttys000     0:00.01 /bin/bash ./system_info.sh
-\```
+```
 
 ---
 
 ## Project Structure
 
-\```
+```
 devops-shell-scripting/
 ├── README.md
 ├── system_info.sh
 └── system_data/
     └── processes.txt
-\```
+```
 
 ---
 
